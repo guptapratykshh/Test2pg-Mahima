@@ -20,5 +20,12 @@ pipeline{
                 echo 'Deploy completed'
             }
         }
+    post {
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+    failure {
+            echo 'Pipeline failed. Please check the logs.'
+        }
     }
 }
