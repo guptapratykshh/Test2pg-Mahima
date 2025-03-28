@@ -16,10 +16,11 @@ pipeline{
         }
         stage('Deploy') {
             steps {
-                sh 'mvn clean deploy'
+                sh 'mvn deploy'
                 echo 'Deploy completed'
             }
         }
+    }
     post {
         success {
             echo 'Pipeline executed successfully!'
